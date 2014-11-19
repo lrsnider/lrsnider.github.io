@@ -32,13 +32,12 @@ footer {
 }
 
 .brand-statement {
-  background-color: #000;
-/*  background-color: rgba(255,255,255,0.45);*/
-  border-radius: 6px;
-  top: 15%;
+  background-color: rgba(255,255,255,0.70);*/
+  border-radius: 1em;
+  margin-top: 6em;
   width: 50%;
   float: left;
-  color: white;
+  color: #C1445D;
 }
 
 .col-md-4 img {
@@ -92,7 +91,7 @@ footer {
 }
 
 .jumbotron {
-  background-image: url("../img/bg.png");
+  background-image: url("../img/me-table.jpg");
   background-size: cover;
   height: 100%;
 }

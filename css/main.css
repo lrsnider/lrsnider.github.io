@@ -1,5 +1,5 @@
 .jumbotron{
-  background-image: url('../img/biopic.jpg');
+  
   background-size: cover;
   height: 100%;
 }
@@ -19,6 +19,7 @@ body, html{
 .brand-statement{
   background-color: rgba(255, 255, 255, 0.45);
   border-radius: 7px;
+  color: black;
 /*  position: absolute;*/
 }
 
@@ -28,4 +29,8 @@ script{
 
 footer{
   text-align: center;
+}
+
+.biograph{
+  margin: 0 auto;
 }
