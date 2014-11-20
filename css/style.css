@@ -1,0 +1,155 @@
+body, html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+}
+
+h2 {
+  font-size: 3.5em;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2em;
+  text-align: center;
+}
+
+figcaption {
+  text-align: center;
+}
+
+footer {
+  margin: 2%;
+  text-align: center;
+}
+
+.bio {
+  font-size: 1.1em;
+  padding: 5%;
+}
+
+.brand-statement {
+  background-color: rgba(255,255,255,0.70);*/
+  border-radius: 1em;
+  margin-top: 6em;
+  width: 50%;
+  float: left;
+  color: #220040;
+}
+
+.col-md-4 img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  height: 175px;
+}
+
+.currently-learning {
+  opacity: 0.5;
+  padding: 10%;
+}
+
+.cafe-mapper .screen {
+  background-image: url("../img/cafe-mapper.jpg");
+}
+
+.portfolio .lead {
+  text-align: center;
+}
+
+.project-description {
+  font-size: 1.1em;
+}
+
+.icook-macbook .screen {
+  background-image: url("../img/icook-macbook.png");
+}
+
+.partify-iphone .screen {
+  background-image: url("../img/partify-iphone.jpg");
+}
+
+.speakup .screen {
+  background-image: url("../img/speakup-ipad.jpg");
+  background-size: cover;
+}
+
+.skills, .portfolio, .about-me {
+  padding-top: 60px;
+  margin-top: -60px;
+}
+
+.fa {
+  margin: 0 10px;
+}
+
+.fa:hover{
+  color: #4099ff;
+}
+
+.jumbotron {
+  background-image: url("../img/me-table.jpg");
+  background-size: cover;
+  height: 100%;
+}
+
+.mobile-header {
+  display: none;
+}
+
+
+.nav {
+  padding: 0;
+}
+
+.navbar-brand, .portfolio-nav > li {
+  margin: 5px 0;
+}
+
+.portfolio-pic {
+  height: 250px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.portfolio-pic:hover {
+  opacity: 0.85;
+}
+
+.screen {
+  background-size: cover;
+}
+
+.skills {
+  margin-bottom: 7%;
+}
+
+.skills .col-md-3 {
+  text-align: center;
+}
+
+/* LANGUAGE ICONS */
+.skills i{
+  font-size: 10em;
+}
+
+
+@media all and (max-width: 600px) {
+    .jumbotron {
+        display: none;
+    }
+
+    .mobile-headshot {
+      margin: 25% auto 10% auto;
+      width: 90%;
+    }
+
+    .mobile-header {
+      display: block;
+      text-align: center;
+    }
+
+}
