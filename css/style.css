@@ -37,7 +37,7 @@ footer {
   margin-top: 6em;
   width: 50%;
   float: left;
-  color: #C1445D;
+  color: #220040;
 }
 
 .col-md-4 img {
@@ -64,16 +64,16 @@ footer {
   font-size: 1.1em;
 }
 
-.partify-macbook .screen {
-  background-image: url("../img/partify-macbook.jpg");
+.icook-macbook .screen {
+  background-image: url("../img/icook-macbook.png");
 }
 
 .partify-iphone .screen {
   background-image: url("../img/partify-iphone.jpg");
 }
 
-.reely .screen {
-  background-image: url("../img/reely-ipad.jpg");
+.speakup .screen {
+  background-image: url("../img/speakup-ipad.jpg");
   background-size: cover;
 }
 
