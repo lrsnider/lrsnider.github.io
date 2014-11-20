@@ -40,6 +40,10 @@ footer {
   color: #220040;
 }
 
+.child{
+  margin-top: 5%;
+}
+
 .col-md-4 img {
   display: block;
   margin: 0 auto;
@@ -52,8 +56,8 @@ footer {
   padding: 10%;
 }
 
-.cafe-mapper .screen {
-  background-image: url("../img/cafe-mapper.jpg");
+.mappetizer .screen {
+  background-image: url("../img/mappetize-macbook.jpg");
 }
 
 .portfolio .lead {
@@ -68,12 +72,16 @@ footer {
   background-image: url("../img/icook-macbook.png");
 }
 
-.partify-iphone .screen {
-  background-image: url("../img/partify-iphone.jpg");
+.mappetize-macbook .screen {
+  background-image: url("../img/mappetize-macbook.png");
+}
+
+.mappetizer-iphone .screen {
+  background-image: url("../img/mappetizer-iphone.png");
 }
 
 .speakup .screen {
-  background-image: url("../img/speakup-ipad.jpg");
+  background-image: url("../img/speakup-ipad.PNG");
   background-size: cover;
 }
 
