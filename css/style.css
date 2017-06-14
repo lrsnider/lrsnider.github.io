@@ -3,7 +3,7 @@ body, html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Slabo 27px', serif;
   position: relative;
 }
 
@@ -22,18 +22,17 @@ figcaption {
 }
 
 footer {
-  margin: 2%;
+  margin-left: 5px;
   text-align: center;
 }
 
 .bio {
-  font-size: 1.1em;
-  padding: 5%;
+  font-size: 18px;
 }
 
 .brand-statement {
   background-color: rgba(255,255,255,0.70);*/
-  border-radius: 1em;
+  border-radius: 5px;
   margin-top: 9em;
   margin-left: 2.5em;
   width: 50%;
@@ -100,11 +99,17 @@ footer {
 }
 
 .jumbotron {
-  background-image: url("../img/me-table.jpg");
+  background-image: url("../img/california.jpg");
   background-size: cover;
   height: 100%;
+  p{
+    font-size: 22px;
+  }
 }
 
+.jumbotron .container{
+  border-radius: 0;
+}
 .mobile-header {
   display: none;
 }
@@ -114,8 +119,19 @@ footer {
   padding: 0;
 }
 
+.navbar-inverse{
+  height: 55px;
+}
+
+.navbar-fixed-top{
+  top: -3px;
+}
+
 .navbar-brand, .portfolio-nav > li {
   margin: 5px 0;
+}
+.portfolio-nav li>a{
+  font-size: 16px;
 }
 
 .portfolio-pic {
@@ -141,10 +157,20 @@ footer {
 }
 
 /* LANGUAGE ICONS */
-.skills i{
+.skills i, img{
   font-size: 10em;
 }
 
+.skills img{
+    width: 200px;
+    height: 200px;
+}
+
+#ico-container div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media all and (max-width: 600px) {
     .jumbotron {
