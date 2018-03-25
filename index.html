@@ -1,380 +1,373 @@
-
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="">
-		<meta name="author" content="">
-		<link rel="icon" href="./img/favicon-star-o.ico">
-		<title>Lisa Snider</title>
 
-		<!-- Bootstrap core CSS + font awesome-->
-		<link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
-		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-		<!-- Mfizz font -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
-		<link rel="stylesheet" type="text/css" href="device-mockups/device-mockups.css" />
-		<!-- Leaflet JS, CSS for map -->
-		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"	integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
-  		crossorigin=""/>
-		<script type="text/javascript" src="js/leaflet-src.js"></script>
-		<script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
-		<link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css">
-		
-		<script type="text/javascript">
-			window.onload=function(){
-			var osmUrl = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
-			osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a>',
-			osm = L.tileLayer(osmUrl, {
-				maxZoom: 14,
-				minZoom: 2,
-				attribution: osmAttrib,
-			});
-		// initialize the map on the "map" div with a given center and zoom
-		var map = L.map('map').setView([38.9072, -77.0369], 10).addLayer(osm);
-		L.marker([47.606209, -122.332071]).addTo(map).bindPopup("Seattle, WA, USA");
-		L.marker([42.279594, -83.732124]).addTo(map).bindPopup("Ann Arbor, MI, USA");
-		L.marker([42.361145, -71.057083]).addTo(map).bindPopup("Boston, MA, USA");
-		L.marker([51.178364, -115.570770]).addTo(map).bindPopup("Banff, Alberta, Canada");
-		L.marker([9.934739, -84.087502]).addTo(map).bindPopup("San José, Costa Rica");
-		L.marker([36.603954, -121.898460]).addTo(map).bindPopup("Monterey, CA, USA");
-		L.marker([29.760427, -95.369803]).addTo(map).bindPopup("Houston, TX, USA");
-		L.marker([26.461462, -80.07282]).addTo(map).bindPopup("Del Ray, FL, USA");
-		L.marker([34.052234, -118.243685]).addTo(map).bindPopup("Los Angeles, CA, USA");
-		L.marker([40.760779, -111.891047]).addTo(map).bindPopup("Salt Lake City, UT, USA");
-		L.marker([55.755826, 37.6173]).addTo(map).bindPopup("Orlando, FL, USA");
-		L.marker([30.267153, -97.743061]).addTo(map).bindPopup("Austin, TX, USA");
-		L.marker([41.902783, 12.496366]).addTo(map).bindPopup("Rome, Italy");
-		L.marker([55.864237, -4.251806]).addTo(map).bindPopup("Glasgow, Scotland");
-		L.marker([55.953252, -3.188267]).addTo(map).bindPopup("Edinburgh, Scotland");
-		L.marker([48.210033, 16.363449]).addTo(map).bindPopup("Vienna, Austria");
-		L.marker([45.837559, -78.378761]).addTo(map).bindPopup("Algonquin Park, Ontario, Canada");
-		L.marker([52.520007, 13.404954]).addTo(map).bindPopup("Berlin, Germany");
-		L.marker([48.856614, 2.352222]).addTo(map).bindPopup("Paris, France");
-		L.marker([51.507351, -0.127758]).addTo(map).bindPopup("London, England");
-		L.marker([52.370216, 4.895168]).addTo(map).bindPopup("Amsterdam, Netherlands");
-		L.marker([55.755826, 37.6173]).addTo(map).bindPopup("Moscow, Russia");
-		L.marker([59.9342, 30.3350]).addTo(map).bindPopup("St. Petersburg, Russia");
-		L.marker([43.6532, -79.3832]).addTo(map).bindPopup("Toronto, Canada");
-		L.marker([59.3293, 18.0686]).addTo(map).bindPopup("Stockholm, Sweden");
-		L.marker([59.9139, 10.7522]).addTo(map).bindPopup("Oslo, Norway");
-		L.marker([55.6761, 12.5683]).addTo(map).bindPopup("Copenhagen, Denmark");
-		L.marker([32.407359, -87.021101]).addTo(map).bindPopup("Selma, AL, USA");
-		L.marker([36.072635, -79.791975]).addTo(map).bindPopup("Greensboro, NC, USA");
-		L.marker([32.776475, -79.931051]).addTo(map).bindPopup("Charleston, SC, USA");
-		L.marker([58.525570, 31.274193]).addTo(map).bindPopup("Novgorod, Russia");
-		L.marker([55.755826, 37.6173]).addTo(map).bindPopup("Moscow, Russia");
-		L.marker([-16.9186, 145.7781]).addTo(map).bindPopup("Cairns, Australia");
-		L.marker([-33.8688, 151.2093]).addTo(map).bindPopup("Sydney, Australia");
-		L.marker([29.4241, -98.4936]).addTo(map).bindPopup("San Antonio, TX, USA");
-		L.marker([43.0831, -73.7846]).addTo(map).bindPopup("Saratoga Springs, NY, USA");
-		L.marker([41.8781, -87.6298]).addTo(map).bindPopup("Chicago, IL, USA");
-		L.marker([36.1627, -86.7816]).addTo(map).bindPopup("Nashville, TN, USA");
-		L.marker([36.1128, -113.9961]).addTo(map).bindPopup("Grand Canyon, AZ, USA");
-		L.marker([37.7749, -122.4194]).addTo(map).bindPopup("San Francisco, CA, USA");
-		L.marker([35.6870, -105.9378]).addTo(map).bindPopup("Santa Fe, NM, USA");
-		L.marker([44.4759, -73.2121]).addTo(map).bindPopup("Burlington, VT, USA");
-		L.marker([40.7128, -74.0059]).addTo(map).bindPopup("New York City, NY, USA");
-		L.marker([38.9072, -77.0369]).addTo(map).bindPopup("Washington, DC, USA");
-		L.marker([19.4326, -99.1332]).addTo(map).bindPopup("Mexico City, Mexico");
-		L.marker([-0.1807, -78.4678]).addTo(map).bindPopup("Quito, Ecuador");
-		L.marker([36.1441, -5.3417]).addTo(map).bindPopup("Rock of Gibraltar");
-		L.marker([30.32164, 35.48013]).addTo(map).bindPopup("Petra, Jordan");
-		L.marker([32.109333, 34.855499]).addTo(map).bindPopup("Tel Aviv, Israel");
-		L.marker([31.7683, 35.2137]).addTo(map).bindPopup("Jerusalem, Israel");
-		L.marker([32.7940, 34.9896]).addTo(map).bindPopup("Haifa, Israel");
-		L.marker([31.4512, 35.3836]).addTo(map).bindPopup("Ein Gedi, Israel");
-		L.marker([29.5577, 34.9519]).addTo(map).bindPopup("Eilat, Israel");
-		L.marker([32.3215, 34.8532]).addTo(map).bindPopup("Netanya, Israel");
-		L.marker([40.4168, -3.7038]).addTo(map).bindPopup("Madrid, Spain");
-		L.marker([36.1627, -86.7816]).addTo(map).bindPopup("Nashville, TN, USA");
-		L.marker([-36.84846, 174.76333]).addTo(map).bindPopup("Auckland, New Zealand");
-		L.marker([-38.1368, 176.2497]).addTo(map).bindPopup("Rotorua, New Zealand");
-		L.marker([-43.53205, 172.63623]).addTo(map).bindPopup("Christchurch, New Zealand");
-		L.marker([-45.03116, 168.6626]).addTo(map).bindPopup("Queenstown, New Zealand");
-		L.marker([-18.2871, 147.6992]).addTo(map).bindPopup("Great Barrier Reef, Australia");
-		L.marker([52.237049, 21.017532]).addTo(map).bindPopup("Warsaw, Poland");
-		L.marker([50.061642, 19.939390]).addTo(map).bindPopup("Krakow, Poland");
-		L.marker([51.246452, 22.568445]).addTo(map).bindPopup("Lublin, Poland");
-		L.marker([50.090473, 14.401048]).addTo(map).bindPopup("Prague, Czeck Republic");
-		L.marker([32.076176, -81.088371]).addTo(map).bindPopup("Savannah, GA, USA");
-		L.marker([38.878337, -77.100703]).addTo(map).bindPopup("Arlington, VA, USA");
-	}
-</script>
-	</head>
+  <head>
 
-	<body data-spy="scroll" data-target=".navbar">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="Lisa Snider" content="">
+    <link rel="icon" href="javascript.svg">
+    <title>Lisa Snider</title>
 
-		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a data-scroll class="navbar-brand" href="#jumbotron">Lisa Snider</a>
-				</div>
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav portfolio-nav">
-						<!-- <li><a data-scroll href="#portfolio">Portfolio</a></li> -->
-						<li><a data-scroll href="#skills">skills</a></li>
-						<li><a data-scroll href="#about-me">about</a></li>
-						<li><a data-scroll href="#map">map</a></li>
-						<li><a data-scroll href="#talks">talks</a></li>
-						<li><a href="img/Lisa-Snider-Resume.pdf">resume</a></li>
-					</ul>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<a class="contact-link" target="_blank" href="https://github.com/lrsnider"><i class="fa fa-github fa-inverse fa-2x"></i></a>
-						</li>
-						<li>
-							<a class="contact-link" target="_blank" href="http://www.linkedin.com/in/sniderlisa"><i class="fa fa-linkedin fa-inverse fa-2x"></i></a>
-						</li>
-						<li>
-							<a class="contact-link" target="_blank" href="https://twitter.com/lissni"><i class="fa fa-twitter fa-inverse fa-2x"></i></a>
-						</li>
-						<li>
-							<a class="contact-link" href="mailto:lisarsnider@gmail.com"><i class="fa fa-envelope fa-inverse fa-2x"></i></a>
-						</li>
-					</ul>
-				</div><!--/.navbar-collapse -->
-			</div>
-		</div>
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
-		<div class="jumbotron" id="jumbotron">
-			<div id="intro-text" class="brand-statement container">
-				<h1>Hi, I'm Lisa Snider</h1>
-				<p>
-					I'm a front-end software engineer passionate about uncovering the meaning behind data through user-friendly, accessible, and interactive visualizations. Currently, I help government and commercial clients understand their data at Booz Allen Hamilton, and am pursuing my MBA in entrepreneurship at Johns Hopkins University's Carey Business School.
-				</p>
-			</div>
-		</div>
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
-	<div class="container mobile-header">
-		<div class="row">
-			<div class="col-md-12">
-				<img src="img/professional-photo-best.jpg" class="img-circle mobile-headshot">
-				<p>
-					front-end developer. innovator. consultant. grad student. conscientious citizen. I'm a lifelong student of happiness, and I love to apply my practical skills to solve social problems by improving user experience. Currently exploring the magical world of data visualization.
-				</p>
-			</div>
-		</div>
-	</div>
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
 
-<!-- 	<div class="container portfolio" id="portfolio" name="portfolio">
-		<h2>Portfolio</h2>
-				<br>
-				<br>
-		<div class="row">
-			<div class="col-md-8">
-				<div class="device-mockup macbook icook-macbook">
-						<div class="device">
-								<div class="screen">
-								</div>
-						</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<h3><a target="_blank" href="https://intense-retreat-4277.herokuapp.com/">iCook</a></h3>
-					<p class="lead">
-						Recipes based on what you already have.
-					</p>
-					<div class="project-description">
-						<p>
-							<strong>iCook</strong> is a cooking app that gives you recipes you can make based on ingredients you already have. It was developed as a sample Rails project for the August 2014 Web Development Immersive course at General Assembly in a one-week sprint to model the agile software development process. iCook uses the Yummly recipe aggregator API.
-						</p>
-						<p>
-							Users can search recipes based on ingredients they already have, and save their favorite recipes.
-						</p>
-					</div>
-					<p>
-						<a class="btn btn-default" target="_blank" href="https://intense-retreat-4277.herokuapp.com/" role="button">Live App &raquo;</a>
-						<a class="btn btn-default" target="_blank" href="https://github.com/lrsnider/cook" role="button">GitHub &raquo;</a>
-					</p>
-			</div>
-		</div>
+  </head>
 
-		<br>
-		<hr>
-		<br>
+  <body id="page-top">
 
-		<div class="row">
-			<div class="col-md-6">
-				<h3><a target="_blank" href="http://sp3ak-up.herokuapp.com/">SpeakUp</a></h3>
-					<p class="lead">
-						Eradicating school bullying one concern at a time.
-					</p>
-					<div class="project-description">
-						<p>
-							<strong>Speakup</strong> is an application for middle and high school students and counselors to combat bullying. SpeakUp was developed as an individual Rails project for the August 2014 Web Development Immersive Course at General Assembly DC. It was developed over a four-day sprint to model the agile software development process including Git version control and daily SCRUMs.
-						</p>
-						<p>
-							Users can log concerns and school administrators can respond to student concerns.
-						</p>
-					</div>
-					<p>
-						<a class="btn btn-default" target="_blank" href="http://sp3ak-up.herokuapp.com/" role="button">Live App &raquo;</a>
-						<a class="btn btn-default" target="_blank" href="https://github.com/lrsnider/speakup" role="button">GitHub &raquo;</a>
-					</p>
-			</div>
-		<div class="col-md-2"></div>
-			<div class="col-md-6">
-				<div class="device-mockup ipad white landscape speakup">
-						<div class="device">
-								<div class="screen">
-								</div>
-						</div>
-				</div>
-			</div>
-		</div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <!-- <img src="github.svg"> --><a class="nav-link" href="https://github.com/lrsnider" target="_blank"><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <!-- <img src="github.svg" href="https://github.com/lrsnider" target="_blank"> --><a class="nav-link" href="https://github.com/lrsnider" target="_blank">GitHub</a>
+            </li>
+            <li class="nav-item active">
+              <!-- <img src="linkedin.svg" href="http://www.linkedin.com/in/sniderlisa"> --><a class="nav-link" target="_blank" href="http://www.linkedin.com/in/sniderlisa">LinkedIn</a>
+            </li>
+            <li class="nav-item active">
+            <!--   <img src="twitter.svg" href="https://twitter.com/lissni"> --><a class="nav-link" target="_blank" href="https://twitter.com/lissni">Twitter</a>
+            </li>
+<!--             <li class="nav-item active">
+              <a class="contact-link" href="mailto:lisarsnider@gmail.com"><i class="fa fa-envelope fa-inverse fa-2x"></i></a>
+            </li>
+            <li><ul class="dropdown-menu"><li>
+              <a class="contact-link" target="_blank" href="https://github.com/lrsnider"><i class="fa fa-github fa-inverse fa-2x"></i></a>
+            </li> -->
+          </ul>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Skills</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-		<br>
-		<hr>
-		<br>
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>Lisa Snider</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5">front end software development, technical management, and business analysis</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </header>
 
-		<div class="row parent">
-			<div class="col-md-6 child">
-				<div id="cafe-mapper" class="device-mockup mappetize-macbook">
-						<div class="device">
-								<div id="mappetizer-screen" class="screen">
-								</div>
-						</div>
-				</div>
-			</div>
-			<div class="col-md-2 child">
-				<div class="device-mockup iphone5 black portrait mappetizer-iphone">
-					<div class="device">
-						<div class="screen"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<h3><a target="_blank" href="https://github.com/pam-/mappetizer">Mappetizer</a></h3>
-					<p class="lead">
-						Harnessing the power of maps to enhance your group outings
-					</p>
-					<div class="project-description">
-						<p>
-							<strong>Mappetizer</strong> is a social web application that enables friends to more effectively plan group outings. It was developed as the group project during WDI in a 4-day spring modeling the agile software development process including frequent SCRUMs. Mappetizer utilizes the Eventbrite and Mapbox APIs to return event results and location markers on the map for the user-selected date/time range.
-						</p>
-						<p>
-							Users can log in, choose a date and time range, view all events in that frame, and add events to their outings, which they can name and further customize to their liking.
-						</p>
-					</div>
-					<p>
-						<a class="btn btn-default" target="_blank" href="http://fathomless-ravine-7965.herokuapp.com/" role="button">Live Site &raquo;</a>
-						<a class="btn btn-default" target="_blank" href="https://github.com/pam-/mappetizer" role="button">GitHub &raquo;</a>
-					</p>
-			</div>
-		</div>-->
-		<br>
-		<hr>
-		<br>
+    <section class="bg-primary" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">technical chops + business skills</h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4"></p>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Read On</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<div class="container skills" id="skills" name="skills">
-			<div class="row" id="ico-container">
-				<h2>skills</h2>
-				<div class="col-md-2 col-md-offset-1">
-					<i class="icon-d3" style="color:#F68949"></i>
-				</div>
-				<div class="col-md-2">
-					<i class="icon-javascript" style="color:#F0DB4F"></i>
-				</div>
-				<div class="col-md-2">
-					<img id="ember" src="img/ember.png">
-				</div>
-				<div class="col-md-2">
-					<i class="icon-html5" style="color:steelblue"></i>
-				</div>
-				<div class="col-md-2">
-					<i class="icon-css3" style="color:darkblue"></i>
-				</div>
-				<div class="col-md-2  col-md-offset-1">
-					<i class="icon-sass" style="color:#C6538C"></i>
-				</div>
-				<div class="col-md-2">
-					<i class="icon-git" style="color:orange"></i>
-				</div>
-				<div class="col-md-2">
-					<i class="icon-ruby" style="color:red"></i>
-				</div>
-				<div class="col-md-2">
-					<i class="icon-postgres" style="color:#336791"></i>
-				</div>
-				<div class="col-md-2">
-					<img id="sketch" src="img/Sketch_logo.png">
-				</div>
-			</div>
-		</div>
+    <section id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">A selection of technical tools, languages, and editors I write/use</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <img src="react.svg" style="height:64px;width:64px"/>
+              <h3 class="mb-3" style="padding-top:10px">React</h3>
+              <p class="text-muted mb-0">The latest and greatest in the popular framework</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <img src="git.svg" style="height:64px;width:64px"/>
+              <h3 class="mb-3" style="padding-top:10px">Git</h3>
+              <p class="text-muted mb-0">The best in source control</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <img src="javascript.svg" style="height:64px;width:64px"/>
+              <h3 class="mb-3" style="padding-top:10px">JavaScript</h3>
+              <p class="text-muted mb-0">ES6, ES7, ES8, everything the language has to offer</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <img src="webpack.svg" style="height:64px;width:64px"/>
+              <h3 class="mb-3" style="padding-top:10px">Webpack</h3>
+              <p class="text-muted mb-0">A static module bundler for modern JavaScript applications</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <img src="html5.svg" style="height:64px;width:64px"/>
+              <h3 class="mb-3" style="padding-top:10px">HTML5</h3>
+              <p class="text-muted mb-0">The markup language to structure/present content on the web</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <img src="css3.svg" style="height:64px;width:64px"/>
+              <h3 class="mb-3" style="padding-top:10px">CSS3</h3>
+              <p class="text-muted mb-0">The latest evolution of the Cascading Style Sheets language</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <img src="sass.svg" style="height:64px;width:64px"/>
+              <h3 class="mb-3" style="padding-top:10px">Sass</h3>
+              <p class="text-muted mb-0">Syntactically awesome style sheets, a CSS extension language</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <img src="bootstrap.svg" style="height:64px;width:64px"/>
+              <h3 class="mb-3" style="padding-top:10px">Bootstrap</h3>
+              <p class="text-muted mb-0">Open-source front-end library for designing on the web</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <img src="bower.svg" style="height:64px;width:64px"/>
+              <h3 class="mb-3" style="padding-top:10px">Bower</h3>
+              <p class="text-muted mb-0">A package manager for the web</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <img src="npm.svg" style="height:64px;width:64px"/>
+              <h3 class="mb-3" style="padding-top:10px">NPM</h3>
+              <p class="text-muted mb-0">The package manager for JavaScript and the world's largest software registry</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <img src="jira.svg" style="height:64px;width:64px"/>
+              <h3 class="mb-3" style="padding-top:10px">Atlassian JIRA</h3>
+              <p class="text-muted mb-0">An agile project management tool that supports any agile methodology</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <img src="basecamp.svg" style="height:64px;width:64px"/>
+              <h3 class="mb-3" style="padding-top:10px">Basecamp</h3>
+              <p class="text-muted mb-0">A web-based project management tool</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <img src="trello.svg" style="height:64px;width:64px"/>
+              <h3 class="mb-3" style="padding-top:10px">Trello</h3>
+              <p class="text-muted mb-0">Another web-based project management application, centered around task boards</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <img src="bitbucket.svg" style="height:64px;width:64px"/>
+              <h3 class="mb-3" style="padding-top:10px">BitBucket</h3>
+              <p class="text-muted mb-0">A web-based version control repository hosting service</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <img src="atom.svg" style="height:64px;width:64px"/>
+              <h3 class="mb-3" style="padding-top:10px">Atom</h3>
+              <p class="text-muted mb-0">Github's open-source and highly-extensible text editor</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <img src="sublimetext.svg" style="height:64px;width:64px"/>
+              <h3 class="mb-3" style="padding-top:10px">Sublime Text 3</h3>
+              <p class="text-muted mb-0">A sophisticated text editor for code, markup and prose</p>
+            </div>
+          </div>
+          <p class="text-muted col-lg-12" style="padding-top:30px">Other skills include: Typescript, Data-Driven Documents</p>
+        </div>
+      </div>
+    </section>
 
-		<hr>
-		
-		<div class="container" id="lisasmap map">
-			<div class="col-md-12" id='map' style="height:350px">
-				<script src="js/leaflet-sleep.js"></script>
-			</div>
-		</div>
+   <!--  <section class="p-0" id="portfolio">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters popup-gallery">
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
+              <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Category
+                  </div>
+                  <div class="project-name">
+                    Project Name
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
+              <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Category
+                  </div>
+                  <div class="project-name">
+                    Project Name
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
+              <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Category
+                  </div>
+                  <div class="project-name">
+                    Project Name
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
+              <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Category
+                  </div>
+                  <div class="project-name">
+                    Project Name
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
+              <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Category
+                  </div>
+                  <div class="project-name">
+                    Project Name
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
+              <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Category
+                  </div>
+                  <div class="project-name">
+                    Project Name
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
-		<hr>
+    <section id="contact" style="background-color:#3B1849;color:white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Let's Get In Touch!</h2>
+            <hr class="my-4">
+            <!-- <p class="mb-5">Looking to hire a versatile front end developer with business acumen? Email me.</p> -->
+          </div>
+        </div>
+        <div class="row">
+<!--           <div class="col-lg-4 ml-auto text-center">
+            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+            <p>@lissni</p>
+          </div> -->
+          <div class="col-lg-12 mr-auto text-center">
+            <a href="mailto:lisarsnider@gmail.com"><img src="email.svg"></a>
+            <p>
+              <a href="mailto:lisarsnider@gmail.com" style="color:white">lisarsnider@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<div class="container" id="talks">
-			<div class="row">
-				<h2>upcoming talks</h2>
-				<div class="col-md-1"></div>
-				<div class="col-md-10">
-					<p style="font-size:18px"> I'm giving an interactive talk/demo on building data visualizations using D3 at Women Who Code DC's Front End Hack Night on September 11, 2017 at <a target="_blank" href="https://www.google.com/maps?f=q&hl=en&q=1325+G+Street,+NW,+3rd+Floor,+Washington,+DC,+us">Social Tables</a><i class="fa fa-sign-in"></i> <a target="_blank" href="https://www.meetup.com/Women-Who-Code-DC/events/241400711/">RSVP here</a></p> 
-				</div>
-			</div>
-		</div>		
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-		<hr>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-		<div class="container about-me" id="about-me" name="about-me">
-		<div class="row">
-			<h2>about</h2>
-			<div class="col-md-1"></div>
-			<div class="col-md-10 bio">
-				<p>Here's my <a target="_blank" href="img/Lisa-Snider-Resume.pdf" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/78779/star.svg');background-position: 1.25px 0.9em;padding-bottom: 10px; background-size: 10px 11px; background-repeat:repeat-x">resume</a> and feel free to <a href="mailto:lisarsnider@gmail.com" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/78779/star.svg');background-position: 1.25px 0.9em;padding-bottom: 10px; background-size: 10px 11px; background-repeat:repeat-x">drop me a note</a>.
-			</div>
-			<div class="col-md-1"></div>
-			</div>
-	</div>
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
 
-<br><br><br>
-			<footer style="text-align:center">
-				<p>&copy; Lisa Snider 2017-2020</p>
-			</footer>
-		</div><!--- /.container -->
+  </body>
 
-
-		<!-- Bootstrap core JavaScript
-		================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="js/jquery-3.2.1.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/smooth-scroll.min.js"></script>
-		<script>smoothScroll.init();</script>
-		<script>
-		$(document).ready(function() {
-			$("a").on('click', function(event) {
-				if (this.hash !== "") {
-					event.preventDefault();
-					var hash = this.hash;
-					$('html, body').animate({
-						scrollTop: $(hash).offset().top
-					}, 800, function() {
-						window.location.hash = hash;
-					});
-				}
-			});
-		});
-	</script>
-	</body>
 </html>
