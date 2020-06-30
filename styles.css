@@ -1,0 +1,81 @@
+header {
+  font-family: 'Parisienne', cursive;
+  align-self: center;
+  font-size: 38px;
+  padding-top: 40px; 
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+header>a {
+  text-decoration: none;
+  color: black;
+  align-self: center;
+}
+
+main {
+  padding: 30px 0;
+  flex: 1;
+  display: flex;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+section {
+  display: block;
+}
+
+.profile {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.about, .outlets, .contact {
+  display: block;
+  margin: 5px 45px;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+img {
+  height: auto;
+  width: 50%;
+  align-self: center; 
+  max-width: 400px;
+}
+
+.heading {
+  background-color: #bdf2d8;
+  display: inline-block;
+  padding: 0;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+p, li {
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: underline;
+  color: black;
+}
+
+footer {
+  border-top: 1px solid #e8e8e8;
+  padding: 30px 0;
+}

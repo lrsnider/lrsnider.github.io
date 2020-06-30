@@ -1,0 +1,74 @@
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+  .menu{
+    height: 10em;
+  }
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arimo', sans-serif;
+  padding: 0 !important;
+  background-color: #FAFAFA;
+}
+
+nav {
+  background-color: #FAFAFA
+}
+
+.menu{
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,255,190,1) 100%);
+  min-height: 720px;
+  color: white !important;
+}
+
+.content{
+  background: #F3F4F9;
+  padding: 2rem 5rem;
+}
+
+.content-subtitle{
+  color: #4b4949;
+}
+
+.content-title{
+  color: #4b4949;
+}
+
+.content-body{
+  margin-top: 2rem;
+  font-size: large;
+  color: #4b4949;
+}
+
+.profile {
+  height: 265px;
+}
+
+/* unvisited link */
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: grey;
+}
+
+/* mouse over link */
+a:hover {
+  color: #00CEB3;
+}
+
+/* selected link */
+a:active {
+  color: navy;
+}
+
+.back-to-top{
+  cursor: pointer; 
+}
