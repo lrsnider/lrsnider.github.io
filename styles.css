@@ -40,7 +40,7 @@ section {
   flex-flow: column wrap;
 }
 
-.about, .outlets, .contact {
+.about, .outlets, .contact, .formerly {
   display: block;
   margin: 5px 45px;
   font-size: 20px;
@@ -82,4 +82,5 @@ footer {
 
 .credit {
   float: right;
+  vertical-align: text-bottom;
 }
